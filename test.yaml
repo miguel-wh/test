@@ -56,6 +56,7 @@ x-tagGroups:
   - name: Sistema
     tags:
       - Zones
+      - OLT
   - name: General
     tags:
       - pet
