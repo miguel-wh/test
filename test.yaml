@@ -1,4 +1,3 @@
-
 openapi: 3.0.0
 servers:
   - url: //subdomain.adminolt.com/api
@@ -369,7 +368,7 @@ paths:
             print(response.content)
       security:
         - api_key: []
-  /olt-list
+  /olt-list/:
     get:
       tags:
       - OLT
@@ -413,7 +412,6 @@ paths:
             }
             response = requests.get(url=endpoint, headers=headers)
             print(response.content)
-        
   /pet:
     parameters:
       - name: cookieParam
