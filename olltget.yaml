@@ -11,8 +11,8 @@ get:
         application/json:
           schema:
             type: array
-            #items:
-              #$ref: '#/components/schemas/OLTResponse'
+            items:
+              $ref: '#/components/schemas/OLTResponse'
     '203':
       description: Non-Authoritative Information
       content:
