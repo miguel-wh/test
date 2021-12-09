@@ -1174,12 +1174,12 @@ components:
       properties:
         name:
           type: string
-          description: Name of Zone
+          description: Name of OLT
           minLength: 8
           example: string
         description:
           type: string
-          description: Description of Zone
+          description: Description of OLT
           minLength: 8
           example: string
     OLTResponse:
@@ -1189,7 +1189,7 @@ components:
       properties:
         id:
           type: integer
-          description: Zone ID
+          description: OLT ID
           minLength: 1
           example: 1
         name:
@@ -1199,7 +1199,7 @@ components:
           example: OLT VSOL GPON
         host:
           type: string
-          description: Description of Zone
+          description: IP Connection
           minLength: 8
           example: 172.28.33.195
         
