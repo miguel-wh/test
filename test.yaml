@@ -369,7 +369,6 @@ paths:
             print(response.content)
       security:
         - api_key: []
-  /olt-list:
   /pet:
     parameters:
       - name: cookieParam
