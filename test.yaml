@@ -369,8 +369,7 @@ paths:
             print(response.content)
       security:
         - api_key: []
-  /olt-list/:
-    !include:olltget.yaml
+  /olt-list/: !include:olltget.yaml
   
   /pet:
     parameters:
