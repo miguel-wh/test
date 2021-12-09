@@ -370,7 +370,7 @@ paths:
       security:
         - api_key: []
   /olt-list: 
-    $ref: olltget.yaml
+    $ref: 'olltget.yaml'
   /pet:
     parameters:
       - name: cookieParam
