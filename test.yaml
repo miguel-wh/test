@@ -369,7 +369,7 @@ paths:
             print(response.content)
       security:
         - api_key: []
-  !includes: olltget.yaml
+  includes: olltget.yaml
   /pet:
     parameters:
       - name: cookieParam
