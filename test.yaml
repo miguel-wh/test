@@ -1,4 +1,3 @@
-
 openapi: 3.0.0
 servers:
   - url: //subdomain.adminolt.com/api
