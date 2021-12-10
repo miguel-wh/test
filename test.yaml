@@ -1,3 +1,4 @@
+
 openapi: 3.0.0
 servers:
   - url: //subdomain.adminolt.com/api
@@ -368,7 +369,50 @@ paths:
             print(response.content)
       security:
         - api_key: []
-  
+  /olt-list/:
+    get:
+      tags:
+      - OLT
+      summary: Get all OLT
+      description: Return all OLT
+      operationId: getOLTAll
+      responses:
+        '200':
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OLTResponse'
+        '203':
+          description: Non-Authoritative Information
+          content:
+            application/json:
+              example:
+                message_status: "El token enviado no es valido"      
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              example:
+                detail: "Las credenciales de autenticación no se proveyeron."
+        '405':
+          description: Method Not Allowed
+          content:
+            application/json:
+              example:
+                detail: "Metodo {{put,post,delete}} no permitido"
+      x-code-samples:
+        - lang: Python
+          source: |
+            import requests
+            endpoint = "https://{{subdomain}}.adminolt.com/api/olt-list/"
+            headers = {
+                "Authorization": "Token {{token}}" 
+            }
+            response = requests.get(url=endpoint, headers=headers)
+            print(response.content)
   /pet:
     parameters:
       - name: cookieParam
